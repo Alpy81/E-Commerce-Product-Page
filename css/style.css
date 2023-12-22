@@ -201,6 +201,7 @@ del {
   padding: 15px 0;
   gap: 1.5rem;
   font-family: "KumbhSans-Bold";
+  width: 90%;
 }
 
 #minus,
@@ -213,17 +214,13 @@ button {
   margin-left: 1rem;
   padding: 15px;
   font-size: 16px;
-  width: 95%;
+  width: 90%;
   border-radius: 10px;
   border: 0px;
   color: var(--white);
   background-color: var(--orange);
   gap: 1rem;
   cursor: pointer;
-}
-
-.btn-cart {
-  margin-bottom: -6px;
 }
 
 /* MEDIA QUERIES */
