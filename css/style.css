@@ -46,18 +46,46 @@ a {
 
 nav {
     height: 10vh;
+    position: fixed; /* Feste Positionierung */
+    width: 100%; /* Die Navbar soll die volle Breite des Bildschirms haben */
+    top: 0; /* Oben fixieren */
+    background-color: var(--light-grayish-blue);
+    z-index: 1000; 
 }
 
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+}
+
+.left-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+} 
+
+.right-icons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1rem;
+    
+} 
+
+#logo {
+    margin-top: -4px;
 }
 
 #avatar {
-    width: 6%;
-    height: 6%;
+    width: 20%;
+    height: 20%;
 }
+
+/* SECTION AREA */
+
 
 
 
