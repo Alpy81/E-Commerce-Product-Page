@@ -86,8 +86,42 @@ nav {
 
 /* SECTION AREA */
 
-
-
+.image-container {
+    position: relative;
+  }
+  
+.image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+} 
+  
+.previous-icon {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    border: 7px solid;
+    border-radius: 100%;
+    border-color: white;
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+  
+.next-icon {
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    border: 8px solid;
+    border-radius: 100%;
+    border-color: white;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+  
 
   
 
