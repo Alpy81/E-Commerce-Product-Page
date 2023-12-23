@@ -120,8 +120,8 @@ nav {
   border-radius: 100%;
   border-color: white;
   background-color: white;
-  width: 35px;
-  height: 35px;
+  width: 33px;
+  height: 33px;
   cursor: pointer;
 }
 
@@ -244,11 +244,6 @@ span {
     gap: 0.5rem;
   }
 
-  #avatar {
-    width: 20px;
-    height: 20px;
-  }
-
   .image-container {
     margin: 1rem;
   }
@@ -278,24 +273,11 @@ span {
 @media only screen and (max-width: 1440px) {
   .navbar {
     height: 8vh;
-  }
-
-  .navbar {
     padding: 1rem;
   }
 
   #logo {
     margin-top: 0;
-  }
-
-  #avatar {
-    width: 30px;
-    height: 30px;
-  }
-
-  .previous-icon,
-  .next-icon {
-    top: 50%;
   }
 
   h1 {
@@ -333,9 +315,14 @@ span {
     gap: 2rem;
   }
 
+  .next-icon {
+    top: 55%;
+    left: 65%;
+  }
+
   #avatar {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .image-container {
