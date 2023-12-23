@@ -128,21 +128,21 @@ nav {
 /* SECTION FIELD */
 
 h1 {
-  font-family: "KumbhSans-Bold";
+  font-family: KumbhSans-Bold, sans-serif;
   margin-top: 1rem;
   margin-left: 1rem;
   width: 60%;
 }
 
 h6 {
-  font-family: "KumbhSans-Bold";
+  font-family: KumbhSans-Bold, sans-serif;
   color: var(--orange);
   margin-top: 1rem;
   margin-left: 1rem;
 }
 
 p {
-  font-family: "KumbhSans-Light";
+  font-family: KumbhSans-Light, sans-serif;
   margin-top: 1rem;
   margin-left: 1rem;
 }
@@ -167,16 +167,16 @@ p {
   margin-right: 1rem;
   margin-top: -1.5rem;
   color: var(--grayish-blue);
-  font-family: "KumbhSans-Light";
+  font-family: KumbhSans-Light, sans-serif;
 }
 
 #price {
-  font-family: "KumbhSans-Bold";
+  font-family: KumbhSans-Bold, sans-serif;
   font-size: 22px;
 }
 
 #discount {
-  font-family: "KumbhSans-Bold";
+  font-family: KumbhSans-Bold, sans-serif;
   color: var(--orange);
   border: 0px solid;
   border-radius: 5px;
@@ -186,7 +186,7 @@ p {
 }
 
 del {
-  font-family: "KumbhSans-Regular";
+  font-family: KumbhSans-Regular, sans-serif;
 }
 
 .quantity-box {
@@ -200,7 +200,7 @@ del {
   background: hsl(215, 100%, 97%);
   padding: 15px 0;
   gap: 1.5rem;
-  font-family: "KumbhSans-Bold";
+  font-family: KumbhSans-Bold, sans-serif;
   width: 90%;
 }
 
@@ -211,16 +211,22 @@ del {
 }
 
 button {
-  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 15px;
+  gap: 0.5rem;
   font-size: 16px;
   width: 90%;
   border-radius: 10px;
   border: 0px;
   color: var(--white);
   background-color: var(--orange);
-  gap: 1rem;
   cursor: pointer;
+}
+
+span {
+  margin-top: 10px;
 }
 
 /* MEDIA QUERIES */
