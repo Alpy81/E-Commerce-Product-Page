@@ -1,4 +1,16 @@
-// Änderungen an der updateQuantity-Funktion
+// Ausführung der Sidebar
+
+function hideSidebar() {
+  document.getElementById("openSideMenu").checked = false;
+}
+
+let sideIconToggle = document.getElementById("sidebarContainer");
+
+document.addEventListener("click", function (event) {
+  if (!sidebarContainer.contains(event.target)) hideSidebar();
+});
+
+// Auswahl der Menge des Produkts
 function updateQuantity(change) {
   const quantityElement = document.getElementById("quantity");
   let currentQuantity = parseInt(quantityElement.innerText);
@@ -6,7 +18,7 @@ function updateQuantity(change) {
   quantityElement.innerText = newQuantity;
 }
 
-// Neue Funktion, um die Menge im Warenkorb zu aktualisieren
+// Funktion, um die Menge im Warenkorb zu aktualisieren
 function addToCart() {
   const quantityElement = document.getElementById("quantity");
   const cartQuantityElement = document.getElementById("cart-quantity");
@@ -16,11 +28,11 @@ function addToCart() {
   if (currentQuantity > 0) {
     cartQuantityElement.innerText = currentQuantity;
   } else {
-    cartQuantityElement.innerText = ""; // Leere den Text, wenn die Menge 0 ist
+    cartQuantityElement.innerText = "";
   }
 }
 
-// Änderungen an der deleteCartItem-Funktion
+// deleteCartItem-Funktion
 function deleteCartItem() {
   const cartWindow = document.getElementById("cart-window");
   const cartQuantityElement = document.getElementById("cart-quantity");
