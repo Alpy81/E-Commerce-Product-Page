@@ -1,9 +1,14 @@
 // Zählerfunktion bei Mengenauswahl des Products
 function updateQuantity(change) {
   const quantityElement = document.getElementById("quantity");
+  const cartQuantityElement = document.getElementById("cart-quantity");
+
   let currentQuantity = parseInt(quantityElement.innerText);
   let newQuantity = Math.max(0, currentQuantity + change);
   quantityElement.innerText = newQuantity;
+
+  // Aktualisiere die Anzeige im Warenkorb-Icon
+  cartQuantityElement.innerText = newQuantity;
 }
 
 // Funktion zum Löschen des Warenkorbs
@@ -11,6 +16,8 @@ function deleteCartItem() {
   const cartWindow = document.getElementById("cart-window");
   if (cartWindow) {
     cartWindow.parentNode.removeChild(cartWindow);
+    // Menge im Warenkorb-Icon aktualisieren
+    updateQuantity(-1); // Reduziere die Menge um 1
   }
 }
 
