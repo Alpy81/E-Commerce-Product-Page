@@ -1,23 +1,35 @@
-// Zählerfunktion bei Mengenauswahl des Products
+// Änderungen an der updateQuantity-Funktion
 function updateQuantity(change) {
+  const quantityElement = document.getElementById("quantity");
+  let currentQuantity = parseInt(quantityElement.innerText);
+  let newQuantity = Math.max(0, currentQuantity + change);
+  quantityElement.innerText = newQuantity;
+}
+
+// Neue Funktion, um die Menge im Warenkorb zu aktualisieren
+function addToCart() {
   const quantityElement = document.getElementById("quantity");
   const cartQuantityElement = document.getElementById("cart-quantity");
 
   let currentQuantity = parseInt(quantityElement.innerText);
-  let newQuantity = Math.max(0, currentQuantity + change);
-  quantityElement.innerText = newQuantity;
-
   // Aktualisiere die Anzeige im Warenkorb-Icon
-  cartQuantityElement.innerText = newQuantity;
+  if (currentQuantity > 0) {
+    cartQuantityElement.innerText = currentQuantity;
+  } else {
+    cartQuantityElement.innerText = ""; // Leere den Text, wenn die Menge 0 ist
+  }
 }
 
-// Funktion zum Löschen des Warenkorbs
+// Änderungen an der deleteCartItem-Funktion
 function deleteCartItem() {
   const cartWindow = document.getElementById("cart-window");
+  const cartQuantityElement = document.getElementById("cart-quantity");
+
   if (cartWindow) {
+    // Setze die Menge im Warenkorb-Icon auf 0
+    cartQuantityElement.innerText = "";
+    // Entferne das Warenkorbfenster
     cartWindow.parentNode.removeChild(cartWindow);
-    // Menge im Warenkorb-Icon aktualisieren
-    updateQuantity(-1); // Reduziere die Menge um 1
   }
 }
 

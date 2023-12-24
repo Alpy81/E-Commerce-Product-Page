@@ -29,9 +29,10 @@
               fill-rule="nonzero"
             />
           </svg>
-          <span id="cart-quantity">0</span>
+          <span id="cart-quantity"></span>
         </div>
         <img id="avatar" src="./img/image-avatar.png" alt="avatar">
+      </div>
       </div>
       <div id="sideMenu">
         <ul class="sideMenuInner">
@@ -74,12 +75,13 @@
       <h3 id="quantity">0</h3>
       <h3 id="plus" onclick="updateQuantity(1)">+</h3>
     </div>
-      <button id="addToCartButton">
-        <img class="btn-cart" src="./img/btn-cart.png" alt="cart">
-        <span id="add-cart">Add to cart</span>
-      </button>
-    </section>
-  </main>
-  <script src="./js/script.js"></script>
+    <button id="addToCartButton" onclick="addToCart()">Add to Cart</button>
+    <img class="btn-cart" src="./img/btn-cart.png" alt="cart">
+    <span id="add-cart">Add to cart</span>
+  </button>
+</section>
+</main>
+<script src="./js/script.js"></script>
 </body>
 </html>
+    
