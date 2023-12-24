@@ -14,7 +14,7 @@ function deleteCartItem() {
   }
 }
 
-// Funktion zum Anzeigen des Cart-Fensters
+// Funktion zum Anzeigen des Warenkorbfensters
 function showCartWindow() {
   const productImage = document.getElementById("product-main");
   const productName = "Autum Limited Edition..";
@@ -24,7 +24,7 @@ function showCartWindow() {
   const basePrice = 125.0;
   const totalPrice = selectedQuantity * basePrice;
 
-  // Erstellen Sie das Warenkorbfensters
+  // Erstellen des Warenkorbfensters
   const cartWindow = document.createElement("div");
   cartWindow.id = "cart-window";
   cartWindow.style.position = "fixed";
