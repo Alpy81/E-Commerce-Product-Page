@@ -27,20 +27,18 @@ function addToCart() {
   // Aktualisiere die Anzeige im Warenkorb-Icon
   if (currentQuantity > 0) {
     cartQuantityElement.innerText = currentQuantity;
+    cartQuantityElement.style.position = "absolute";
+    cartQuantityElement.style.right = "37px";
+    cartQuantityElement.style.top = "-10px";
+    cartQuantityElement.style.border = "0px solid";
+    cartQuantityElement.style.borderRadius = "20px";
+    cartQuantityElement.style.padding = "0 5px";
+    cartQuantityElement.style.fontSize = "9px";
+    cartQuantityElement.style.backgroundColor = "hsl(26, 95%, 50%)";
+    cartQuantityElement.style.color = "white";
   } else {
     cartQuantityElement.innerText = "";
   }
-
-  cartQuantityElement.innerText = currentQuantity;
-  cartQuantityElement.style.position = "absolute";
-  cartQuantityElement.style.right = "37px";
-  cartQuantityElement.style.top = "-10px";
-  cartQuantityElement.style.border = "0px solid";
-  cartQuantityElement.style.borderRadius = "20px";
-  cartQuantityElement.style.padding = "0 5px";
-  cartQuantityElement.style.fontSize = "9px";
-  cartQuantityElement.style.backgroundColor = "hsl(26, 95%, 50%)";
-  cartQuantityElement.style.color = "white";
 }
 
 // deleteCartItem-Funktion
@@ -57,12 +55,13 @@ function deleteCartItem() {
 }
 
 // Funktion zum Anzeigen des Warenkorbfensters
+// Funktion zum Anzeigen des Warenkorbfensters
 function showCartWindow() {
   const productImage = document.getElementById("product-main");
+  const quantityElement = document.getElementById("quantity");
+  const cartQuantityElement = document.getElementById("cart-quantity");
   const productName = "Autum Limited Edition..";
-  const selectedQuantity = parseInt(
-    document.getElementById("quantity").innerText
-  );
+  const selectedQuantity = parseInt(quantityElement.innerText);
   const basePrice = 125.0;
   const totalPrice = selectedQuantity * basePrice;
 
@@ -83,31 +82,44 @@ function showCartWindow() {
 
   // Inhalt des Warenkorbs
   cartWindow.innerHTML = `
-    <h4 style="margin-bottom: 10px; font-family: KumbhSans-Bold; border-radius: 10px;">Cart</h4>
-    <hr style="margin-bottom: 10px; border-radius: 10px;">
-    <div style="display: flex; align-items: center; margin-bottom: 15px; border-radius: 10px;">
-      <img src="${
-        productImage.src
-      }" alt="${productName}" style="width: 50px; height: 50px; margin-right: 10px; border-radius: 5px;">
-      <div>
-        <p style="margin: 0; color: hsl(219, 9%, 45%); 
-        font-family: KumbhSans-Regular; font-size: 14px;">${productName}</p><p style="margin: 0; color: hsl(219, 9%, 45%); 
-        font-family: KumbhSans-Regular; font-size: 14px;">
-        $${basePrice.toFixed(
-          2
-        )} x ${selectedQuantity} = <span style="color: black; font-family: KumbhSans-Bold;">$${totalPrice.toFixed()}</span></p>
+<h4 style="margin-bottom: 10px; font-family: KumbhSans-Bold; border-radius: 10px; color: hsl(219, 9%, 45%);">
+  ${selectedQuantity > 0 ? "Cart" : "Empty"}
+</h4>
+${
+  selectedQuantity > 0
+    ? `
+      <hr style="margin-bottom: 10px; border-radius: 10px;">
+      <div style="display: flex; align-items: center; margin-bottom: 15px; border-radius: 10px;">
+        <img src="${
+          productImage.src
+        }" alt="${productName}" style="width: 50px; height: 50px; margin-right: 10px; border-radius: 5px;">
+        <div>
+          <p style="margin: 0; color: hsl(219, 9%, 45%); font-family: KumbhSans-Regular; font-size: 14px;">${productName}</p>
+          <p style="margin: 0; color: hsl(219, 9%, 45%); font-family: KumbhSans-Regular; font-size: 14px;">
+            $${basePrice.toFixed(2)} x ${selectedQuantity} =
+            <span style="color: black; font-family: KumbhSans-Bold;">$${totalPrice.toFixed()}</span>
+          </p>
+        </div>
+        <img src="./img/image-delete.png" alt="delete" style="cursor: pointer; margin-top: 1rem; margin-left: auto;" onclick="deleteCartItem()">
       </div>
-      <img src="./img/image-delete.png" alt="delete" style="cursor: pointer; margin-top: 1rem; margin-left: auto;" onclick="deleteCartItem()">
-    </div>
-    <button id="checkoutButton" style="padding: 10px; background-color: hsl(26, 100%, 55%); margin-bottom: 5px; color: #fff; border: none; border-radius: 10px; cursor: pointer;">Checkout</button>
-  `;
+      <button id="checkoutButton" style="padding: 10px; background-color: hsl(26, 100%, 55%); margin-bottom: 5px; color: #fff; border: none; border-radius: 10px; cursor: pointer;">Checkout</button>
+    `
+    : `
+      <hr style="margin-bottom: 10px; border-radius: 10px;">
+      <h4 style="display: flex; justify-content: center; align-items: center; margin-top: 3rem; 
+      color: hsl(219, 9%, 45%); font-family: KumbhSans-Bold;">Your Cart is Empty</h4>
+    `
+}
+`;
 
   document.body.appendChild(cartWindow);
 
   const checkoutButton = document.getElementById("checkoutButton");
-  checkoutButton.addEventListener("click", function () {
-    alert("Checkout clicked!");
-  });
+  if (checkoutButton && selectedQuantity > 0) {
+    checkoutButton.addEventListener("click", function () {
+      alert("Checkout clicked!");
+    });
+  }
 }
 
 // Event Listener für den "Add to Cart" Button
