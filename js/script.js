@@ -29,7 +29,7 @@ function addToCart() {
     cartQuantityElement.innerText = currentQuantity;
     cartQuantityElement.style.position = "absolute";
     cartQuantityElement.style.right = "37px";
-    cartQuantityElement.style.top = "-10px";
+    cartQuantityElement.style.top = "-1px";
     cartQuantityElement.style.border = "0px solid";
     cartQuantityElement.style.borderRadius = "20px";
     cartQuantityElement.style.padding = "0 5px";
@@ -49,12 +49,12 @@ function deleteCartItem() {
   if (cartWindow) {
     // Setze die Menge im Warenkorb-Icon auf 0
     cartQuantityElement.innerText = "";
+    cartWindow.innerHTML = "";
     // Entferne das Warenkorbfenster
     cartWindow.parentNode.removeChild(cartWindow);
   }
 }
 
-// Funktion zum Anzeigen des Warenkorbfensters
 // Funktion zum Anzeigen des Warenkorbfensters
 function showCartWindow() {
   const productImage = document.getElementById("product-main");
@@ -100,7 +100,7 @@ ${
             <span style="color: black; font-family: KumbhSans-Bold;">$${totalPrice.toFixed()}</span>
           </p>
         </div>
-        <img src="./img/image-delete.png" alt="delete" style="cursor: pointer; margin-top: 1rem; margin-left: auto;" onclick="deleteCartItem()">
+        <img src="./img/image-delete.png" style="cursor: pointer; margin-top: 1rem; margin-left: auto;" onclick="deleteCartItem()">
       </div>
       <button id="checkoutButton" style="padding: 10px; background-color: hsl(26, 100%, 55%); margin-bottom: 5px; color: #fff; border: none; border-radius: 10px; cursor: pointer;">Checkout</button>
     `
@@ -108,6 +108,7 @@ ${
       <hr style="margin-bottom: 10px; border-radius: 10px;">
       <h4 style="display: flex; justify-content: center; align-items: center; margin-top: 3rem; 
       color: hsl(219, 9%, 45%); font-family: KumbhSans-Bold;">Your Cart is Empty</h4>
+      <img src="./img/image-delete.png" style="cursor: pointer; margin-top: 4rem; margin-left: 15rem;" onclick="deleteCartItem()">
     `
 }
 `;
@@ -117,7 +118,7 @@ ${
   const checkoutButton = document.getElementById("checkoutButton");
   if (checkoutButton && selectedQuantity > 0) {
     checkoutButton.addEventListener("click", function () {
-      alert("Checkout clicked!");
+      alert("Please wait for payment process ..");
     });
   }
 }
