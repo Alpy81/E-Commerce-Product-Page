@@ -46,7 +46,7 @@ a {
   color: var(--orange);
 }
 
-/** BASIC STYLE **/
+/** SIDEBAR **/
 
 #sideMenu {
   height: 100%;
@@ -171,7 +171,7 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: var(--light-grayish-blue);
+  background-color: var(--white);
   z-index: 1000;
 }
 
@@ -183,6 +183,7 @@ nav {
 }
 
 .right-icons {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -195,6 +196,13 @@ nav {
   margin-top: 1.1rem;
   cursor: pointer;
   margin-bottom: -1.4rem;
+}
+
+span #cart-quantity {
+  font-size: 3px;
+  font-family: KumbhSans-Bold, sans-serif;
+  margin-left: -5px;
+  position: absolute;
 }
 
 #avatar {

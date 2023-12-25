@@ -30,6 +30,17 @@ function addToCart() {
   } else {
     cartQuantityElement.innerText = "";
   }
+
+  cartQuantityElement.innerText = currentQuantity;
+  cartQuantityElement.style.position = "absolute";
+  cartQuantityElement.style.right = "37px";
+  cartQuantityElement.style.top = "-10px";
+  cartQuantityElement.style.border = "0px solid";
+  cartQuantityElement.style.borderRadius = "20px";
+  cartQuantityElement.style.padding = "0 5px";
+  cartQuantityElement.style.fontSize = "9px";
+  cartQuantityElement.style.backgroundColor = "hsl(26, 95%, 50%)";
+  cartQuantityElement.style.color = "white";
 }
 
 // deleteCartItem-Funktion
@@ -79,12 +90,12 @@ function showCartWindow() {
         productImage.src
       }" alt="${productName}" style="width: 50px; height: 50px; margin-right: 10px; border-radius: 5px;">
       <div>
-        <p style="margin: 0; color: hsl(219, 9%, 45%); font-family: KumbhSans-Regular; font-size: 14px;">${productName}</p>
-        <p style="margin: 0; color: hsl(219, 9%, 45%); font-family: KumbhSans-Regular; font-size: 14px;">$${basePrice.toFixed(
+        <p style="margin: 0; color: hsl(219, 9%, 45%); 
+        font-family: KumbhSans-Regular; font-size: 14px;">${productName}</p><p style="margin: 0; color: hsl(219, 9%, 45%); 
+        font-family: KumbhSans-Regular; font-size: 14px;">
+        $${basePrice.toFixed(
           2
-        )} x ${selectedQuantity} = <span style="color: black; font-family: KumbhSans-Bold;">$${totalPrice.toFixed(
-    2
-  )}</span></p>
+        )} x ${selectedQuantity} = <span style="color: black; font-family: KumbhSans-Bold;">$${totalPrice.toFixed()}</span></p>
       </div>
       <img src="./img/image-delete.png" alt="delete" style="cursor: pointer; margin-top: 1rem; margin-left: auto;" onclick="deleteCartItem()">
     </div>
