@@ -29,11 +29,12 @@ function addToCart() {
     cartQuantityElement.innerText = currentQuantity;
     cartQuantityElement.style.position = "absolute";
     cartQuantityElement.style.right = "37px";
-    cartQuantityElement.style.top = "-1px";
+    cartQuantityElement.style.top = "-10px";
     cartQuantityElement.style.border = "0px solid";
     cartQuantityElement.style.borderRadius = "20px";
-    cartQuantityElement.style.padding = "0 5px";
-    cartQuantityElement.style.fontSize = "9px";
+    cartQuantityElement.style.padding = "0 6px";
+    cartQuantityElement.style.fontWeight = "400";
+    cartQuantityElement.style.fontSize = "11px";
     cartQuantityElement.style.backgroundColor = "hsl(26, 95%, 50%)";
     cartQuantityElement.style.color = "white";
   } else {
