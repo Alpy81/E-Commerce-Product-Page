@@ -249,3 +249,11 @@ span {
   border-color: var(--orange);
   background-color: var(--pale-orange);
 }
+
+.thumb {
+  transition: filter 0.2s ease-in-out;
+}
+
+.thumb:hover {
+  filter: sepia(80%) brightness(90%);
+}
