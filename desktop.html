@@ -18,13 +18,14 @@
           <li><a href="#">Contact</a></li>
         </ul>
         <div class="right-icons">
-          <img src="./img/icon-cart.png" alt="icon-cart" />
+          <img id="cart" src="./img/icon-cart.png" alt="cart">
+          <span id="cart-quantity"></span>
           <img id="avatar" src="./img/image-avatar.png" alt="avatar" />
         </div>
       </nav>
       <hr />
     <section>
-      <img class="main-product" src="./img/image-product-1.jpg" alt="main-pic">
+      <img class="product-main" src="./img/image-product-1.jpg" alt="main-pic">
       <article>
         <h6>SNEAKER COMPANY</h5>
           <h1>Fall Limited Edition Sneakers</h1>
@@ -42,23 +43,34 @@
         </div>
         <div class="order-field">
         <div class="quantity-box">
-          <h3 id="minus">-</h3>
+          <h3 id="minus"onclick="updateQuantity(-1)">-</h3>
           <h3 id="quantity">0</h3>
-          <h3 id="plus">+</h3>
+          <h3 id="plus"onclick="updateQuantity(1)">+</h3>
         </div>
-        <button>
+        <button id="addToCartButton" onclick="addToCart()">
         <img class="btn-cart" src="./img/btn-cart.png" alt="btn-cart"><span>Add To Cart</span>
         </button>
         </div>
         <div class="gallery">
-          <img class="thumb" src="./img/image-product-1-thumbnail.jpg" alt="thumb"/>
-          <img class="thumb"src="./img/image-product-2-thumbnail.jpg" alt="thumb">
-          <img class="thumb"src="./img/image-product-3-thumbnail.jpg" alt="thumb">
-          <img class="thumb"src="./img/image-product-4-thumbnail.jpg" alt="thumb">
+          <img class="thumb-one" src="./img/image-product-1-thumbnail.jpg" alt="thumb" onclick="openLightBox('thumb-one')"/>
+          <img class="thumb-two" src="./img/image-product-2-thumbnail.jpg" alt="thumb" onclick="openLightBox('thumb-two')"/>
+          <img class="thumb-three" src="./img/image-product-3-thumbnail.jpg" alt="thumb" onclick="openLightBox('thumb-three')"/>
+          <img class="thumb-four" src="./img/image-product-4-thumbnail.jpg" alt="thumb" onclick="openLightBox('thumb-four')"/>
         </div>
-      </main>
-      <script src="js/desktop.js"></script>
-    </body>
-  </html>
-          
-        
+        <div id="lightbox" onclick="closeLightBox()">
+          <div class="main-product">
+          <img class="product-main" src="./img/image-product-1.jpg" alt="main-pic">
+          </div>
+          <div id="lightbox-container">
+          <img class="thumb-one" src="./img/image-product-1-thumbnail.jpg" alt="thumb" onclick="openLightBox('thumb-one')"/>
+          <img class="thumb-two" src="./img/image-product-2-thumbnail.jpg" alt="thumb" onclick="openLightBox('thumb-two')"/>
+          <img class="thumb-three" src="./img/image-product-3-thumbnail.jpg" alt="thumb" onclick="openLightBox('thumb-three')"/>
+          <img class="thumb-four" src="./img/image-product-4-thumbnail.jpg" alt="thumb" onclick="openLightBox('thumb-four')"/>
+          </div>
+        </div>
+        <section>
+        </main>
+        <script src="desktop.js"></script>
+        <script src="lightbox.js"></script>
+      </body>
+    </html>
