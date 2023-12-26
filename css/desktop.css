@@ -1,0 +1,248 @@
+/** BASIC STYLE **/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "KumbhSans-Bold";
+  src: url(../fonts/KumbhSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "KumbhSans-Regular";
+  src: url(../fonts/KumbhSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "KumbhSans-Light";
+  src: url(../fonts/KumbhSans-Light.ttf);
+}
+
+/* Primary Colors */
+:root {
+  --orange: hsl(26, 100%, 55%);
+  --pale-orange: hsl(25, 100%, 94%);
+}
+
+/* Neutral Colors */
+:root {
+  --very-dark-blue: hsl(220, 13%, 13%);
+  --dark-grayish-blue: hsl(219, 9%, 45%);
+  --grayish-blue: hsl(220, 14%, 75%);
+  --light-grayish-blue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsla(0, 0%, 0%, 0.75);
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--white);
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+  font-family: KumbhSans-Light, sans-serif;
+}
+
+/** NAVBAR **/
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  gap: 5rem;
+}
+
+ul {
+  display: inline-flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.right-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+#avatar {
+  width: 35px;
+  height: 35px;
+}
+
+#avatar:hover {
+  border: 2px solid;
+  border-radius: 50%;
+  border-color: var(--orange);
+}
+
+hr {
+  margin-left: 6.5rem;
+  width: 85%;
+  color: var(--light-grayish-blue);
+  margin-bottom: 5rem;
+}
+
+/** SECTION AREA **/
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem 0 12rem;
+  gap: 7rem;
+}
+
+.main-product {
+  width: 25vw;
+  height: 42vh;
+  border: 0px solid;
+  border-radius: 12px;
+}
+
+article {
+  margin-top: -3rem;
+  line-height: 2rem;
+}
+
+h6 {
+  color: var(--orange);
+  font-family: KmbhSans-Bold, sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+article h1 {
+  margin-bottom: 1.5rem;
+  width: 50%;
+  color: black;
+  font-size: 30px;
+  font-family: KumbhSans-Bold, sans-serif;
+}
+
+article p {
+  width: 60%;
+  line-height: 1.5rem;
+}
+
+/** PRICE FIELD **/
+
+.price-description {
+  margin-top: -5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#price {
+  color: black;
+  font-size: 22px;
+  font-family: KumbhSans-Bold, sans-serif;
+}
+
+#discount {
+  font-size: 13px;
+  color: var(--orange);
+  border: 0px solid;
+  border-radius: 5px;
+  padding: 2px 5px;
+  border-color: var(--pale-orange);
+  background-color: var(--pale-orange);
+  font-family: KumbhSans-Bold, sans-serif;
+}
+
+.retail-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3.6rem;
+  margin-bottom: 1rem;
+  font-family: KumbhSans-Regular, sans-serif;
+  font-size: 15px;
+  color: var(--dark-grayish-blue);
+}
+
+/** ORDER FIELD **/
+
+.order-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 14.5rem;
+  gap: 1rem;
+}
+
+.quantity-box {
+  display: flex;
+  justify-content: space-center;
+  align-items: center;
+  border: 0px solid;
+  border-radius: 7px;
+  background: hsl(223, 64%, 98%);
+  padding: 8px 15px;
+  gap: 1.5rem;
+  font-family: KumbhSans-Bold, sans-serif;
+}
+
+#minus,
+#plus {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+#quantity {
+  color: hsl(220, 13%, 13%);
+  font-size: 16px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 50px;
+  gap: 0.5rem;
+  font-size: 16px;
+  border-radius: 7px;
+  border: 0px;
+  color: var(--white);
+  background-color: var(--orange);
+  cursor: pointer;
+}
+
+span {
+  margin-top: 5px;
+}
+
+/** GALLERY FIELD **/
+
+.gallery {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 12rem;
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 6.2%;
+  border: 0px solid;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  border: 3px solid;
+  border-color: var(--orange);
+  background-color: var(--pale-orange);
+}

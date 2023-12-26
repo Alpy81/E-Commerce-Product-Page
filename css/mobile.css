@@ -255,6 +255,7 @@ h6 {
   color: var(--orange);
   margin-top: 1rem;
   margin-left: 1rem;
+  letter-spacing: 1px;
 }
 
 p {
