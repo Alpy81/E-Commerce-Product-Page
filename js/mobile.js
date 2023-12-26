@@ -1,5 +1,4 @@
 // Ausführung der Sidebar
-
 function hideSidebar() {
   document.getElementById("openSideMenu").checked = false;
 }
@@ -24,6 +23,7 @@ function addToCart() {
   const cartQuantityElement = document.getElementById("cart-quantity");
 
   let currentQuantity = parseInt(quantityElement.innerText);
+
   // Aktualisiere die Anzeige im Warenkorb-Icon
   if (currentQuantity > 0) {
     cartQuantityElement.innerText = currentQuantity;
@@ -60,7 +60,6 @@ function deleteCartItem() {
 function showCartWindow() {
   const productImage = document.getElementById("product-main");
   const quantityElement = document.getElementById("quantity");
-  const cartQuantityElement = document.getElementById("cart-quantity");
   const productName = "Autum Limited Edition..";
   const selectedQuantity = parseInt(quantityElement.innerText);
   const basePrice = 125.0;
