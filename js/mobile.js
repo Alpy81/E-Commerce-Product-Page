@@ -124,9 +124,9 @@ ${
   }
 }
 
-// Event Listener für den "Add to Cart" Button
-const addToCartButton = document.getElementById("addToCartButton");
-addToCartButton.addEventListener("click", showCartWindow);
+// Event Listener für den Warenkorb
+const cartIcon = document.getElementById("cart");
+cartIcon.addEventListener("click", showCartWindow);
 
 // Event Listener für das Schließen des Warenkorbs bei Klick außerhalb
 document.addEventListener("click", function (event) {

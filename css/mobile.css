@@ -198,6 +198,10 @@ nav {
   margin-bottom: -1.4rem;
 }
 
+#cart {
+  cursor: pointer;
+}
+
 #avatar {
   width: 22px;
   height: 22px;
