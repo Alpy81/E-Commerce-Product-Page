@@ -1,23 +1,46 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Finde die Hauptbild- und Daumen-Elemente
-  const mainPic = document.querySelector("#lightbox .product-main");
-  const thumbs = document.querySelectorAll("#lightbox-container img.thumb");
+function openLightBox(imageSrc) {
+  let lightbox = document.getElementById("lightbox");
+  let mainImageContainer = document.querySelector("#lightbox .main-product");
+  let lightboxContainer = document.getElementById("lightbox-container");
 
-  // Füge Klick-Eventlistener zu den Daumen-Bildern hinzu
-  thumbs.forEach(function (thumb) {
-      thumb.addEventListener("click", function () {
-          mainPic.src = thumb.src; // Ersetze das Hauptbild durch das angeklickte Daumen-Bild
-          closeLightBox(); // Schließe die Lightbox nach dem Klick auf einen Daumen
-      });
-  });
-});
+  // Setze das Hauptbild in der Lightbox
+  let mainImage = document.createElement("img");
+  mainImage.src = mainImageContainer.querySelector(".product-main").src;
+  mainImage.alt = "main-pic";
+  mainImage.classList.add("product-main");
+  mainImageContainer.innerHTML = "";
+  mainImageContainer.appendChild(mainImage);
 
-// Öffne die Lightbox
-function openLightBox() {
-  document.getElementById("lightbox").style.display = "block";
+  // Lösche alle vorhandenen Bilder im Lightbox-Container
+  lightboxContainer.innerHTML = "";
+
+  // Füge die Miniaturansichten in den Lightbox-Container ein
+  let thumbOne = createThumbnail("./img/image-product-1-thumbnail.jpg");
+  let thumbTwo = createThumbnail("./img/image-product-2-thumbnail.jpg");
+  let thumbThree = createThumbnail("./img/image-product-3-thumbnail.jpg");
+  let thumbFour = createThumbnail("./img/image-product-4-thumbnail.jpg");
+
+  lightboxContainer.appendChild(thumbOne);
+  lightboxContainer.appendChild(thumbTwo);
+  lightboxContainer.appendChild(thumbThree);
+  lightboxContainer.appendChild(thumbFour);
+
+  // Zeige die Lightbox an
+  lightbox.style.display = "block";
+
 }
 
-// Schließe die Lightbox
+function createThumbnail(src) {
+  let thumbnail = document.createElement("img");
+  thumbnail.src = src;
+  thumbnail.alt = "thumb";
+  thumbnail.classList.add("thumb");
+  thumbnail.onclick = function () {
+    openLightBox(src);
+  };
+  return thumbnail;
+}
+
 function closeLightBox() {
   document.getElementById("lightbox").style.display = "none";
 }
