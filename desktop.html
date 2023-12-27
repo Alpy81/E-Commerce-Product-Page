@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=1440, height=900, initial-scale=1.0" />
     <title>Frontend Mentor | E-commerce product page</title>
     <link rel="stylesheet" href="css/desktop.css" />
+    <link rel="stylesheet" href="css/lightbox.css" />
+
   </head>
   <body>
     <main>
@@ -57,17 +59,22 @@
           <img class="thumb-three" src="./img/image-product-3-thumbnail.jpg" alt="thumb" onclick="openLightBox('thumb-three')"/>
           <img class="thumb-four" src="./img/image-product-4-thumbnail.jpg" alt="thumb" onclick="openLightBox('thumb-four')"/>
         </div>
-        <div id="lightbox" onclick="closeLightBox()">
-          <div class="main-product">
-          <img class="product-main" src="./img/image-product-1.jpg" alt="main-pic">
+        <section class="lightbox-area">
+          <div id="lightbox" onclick="closeLightBox()">
+          <div class="main-pic">
+            <img id="product-one" class="thumb-one" src="./img/image-product-1.jpg" alt="image-1" />
+            <img id="product-two" class="thumb-two" src="./img/image-product-2.jpg" alt="image-2" />
+            <img id="product-three" class="thumb-three" src="./img/image-product-3.jpg" alt="image-3" />
+            <img id="product-four" class="thumb-four" src="./img/image-product-4.jpg" alt="image-4" />
           </div>
-          <div id="lightbox-container">
-          <img class="thumb-one" src="./img/image-product-1-thumbnail.jpg" alt="thumb" />
-          <img class="thumb-two" src="./img/image-product-2-thumbnail.jpg" alt="thumb" />
-          <img class="thumb-three" src="./img/image-product-3-thumbnail.jpg" alt="thumb" />
-          <img class="thumb-four" src="./img/image-product-4-thumbnail.jpg" alt="thumb" />
+            <div id="lightbox-container">
+              <img class="thumb-one" src="./img/image-product-1-thumbnail.jpg" alt="thumb-one" />
+              <img class="thumb-two" src="./img/image-product-2-thumbnail.jpg" alt="thumb-two" />
+              <img class="thumb-three" src="./img/image-product-3-thumbnail.jpg" alt="thumb-three" />
+              <img class="thumb-four" src="./img/image-product-4-thumbnail.jpg" alt="thumb-four" />
+            </div>
           </div>
-        </div>
+          </section>
         <a id="move-page" href="mobile.html">zur Mobile-Version</a>
         </main>
         <script src="./js/desktop.js"></script>
