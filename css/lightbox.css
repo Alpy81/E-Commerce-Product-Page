@@ -13,8 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
-   
+    margin-top: 5rem;
   }
   
   .main-pic img {
@@ -25,14 +24,39 @@
     margin-bottom: 3rem;
   }
 
- 
+  #prev-icon, #next-icon {
+    position: absolute;
+    top: 43%;
+    transform: translateY(-50%);
+    display: flex;
+    border: 7px solid;
+    border-radius: 100%;
+    border-color: white;
+    background-color: white;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+  }
+   
+   #prev-icon {
+    left: 23rem;
+  }
+   
+   #next-icon {
+    right: 23rem;
+  }
+
+  #prev-icon:hover, 
+  #next-icon:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+  }
+   
   #lightbox-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    
-    
   }
   
   #lightbox-container img {

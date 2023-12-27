@@ -45,9 +45,10 @@
         </div>
         <div class="order-field">
         <div class="quantity-box">
-          <h3 id="minus"onclick="updateQuantity(-1)">-</h3>
+          <svg id="minus" width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" onclick="updateQuantity(-1)"/></svg>
           <h3 id="quantity">0</h3>
-          <h3 id="plus"onclick="updateQuantity(1)">+</h3>
+          <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" id="plus"onclick="updateQuantity(1)"
+            /></svg>
         </div>
         <button id="addToCartButton" onclick="addToCart()">
         <img class="btn-cart" src="./img/btn-cart.png" alt="btn-cart"><span>Add To Cart</span>
@@ -61,12 +62,14 @@
         </div>
         <section class="lightbox-area">
           <div id="lightbox" onclick="closeLightBox()">
-          <div class="main-pic">
-            <img id="product-one" class="thumb-one" src="./img/image-product-1.jpg" alt="image-1" />
-            <img id="product-two" class="thumb-two" src="./img/image-product-2.jpg" alt="image-2" />
-            <img id="product-three" class="thumb-three" src="./img/image-product-3.jpg" alt="image-3" />
-            <img id="product-four" class="thumb-four" src="./img/image-product-4.jpg" alt="image-4" />
-          </div>
+            <img id="prev-icon" src="./img/icon-previous.png" alt="previous" onclick="changeImage(-1)">
+            <div class="main-pic">
+              <img id="product-one" class="thumb-one" src="./img/image-product-1.jpg" alt="image-1" />
+              <img id="product-two" class="thumb-two" src="./img/image-product-2.jpg" alt="image-2" />
+              <img id="product-three" class="thumb-three" src="./img/image-product-3.jpg" alt="image-3" />
+              <img id="product-four" class="thumb-four" src="./img/image-product-4.jpg" alt="image-4" />
+            </div>
+            <img id="next-icon" src="./img/icon-next.png" alt="next" onclick="changeImage(1)">
             <div id="lightbox-container">
               <img class="thumb-one" src="./img/image-product-1-thumbnail.jpg" alt="thumb-one" />
               <img class="thumb-two" src="./img/image-product-2-thumbnail.jpg" alt="thumb-two" />
@@ -75,9 +78,11 @@
             </div>
           </div>
           </section>
-        <a id="move-page" href="mobile.html">zur Mobile-Version</a>
-        </main>
-        <script src="./js/desktop.js"></script>
-        <script src="./js/lightbox.js"></script>
-      </body>
-    </html>
+          <a id="move-page" href="mobile.html">zur Mobile-Version</a>
+          </main>
+          <script src="./js/desktop.js"></script>
+          <script src="./js/lightbox.js"></script>
+        </body>
+      </html>
+            
+              

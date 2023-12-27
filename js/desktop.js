@@ -31,7 +31,7 @@ function addToCart() {
   }
 }
 
-// deleteCartItem-Funktion
+// deleteCartItem-FunktionI have a code for the eventlist
 function deleteCartItem() {
   const cartWindow = document.getElementById("cart-window");
   const cartQuantityElement = document.getElementById("cart-quantity");
@@ -72,7 +72,7 @@ function showCartWindow() {
   // Inhalt des Warenkorbs
   cartWindow.innerHTML = `
 <h4 style="margin-bottom: 10px; font-family: KumbhSans-Bold; border-radius: 10px; color: hsl(219, 9%, 45%);">
-  ${selectedQuantity > 0 ? "Cart" : "Cart"}
+  ${selectedQuantity > 0 ? "Cart" : "Empty"}
 </h4>
 ${
   selectedQuantity > 0
@@ -102,11 +102,6 @@ ${
 
   document.body.appendChild(cartWindow);
 
-  // Event Listener für den Warenkorb
-  
-  const cartIcon = document.getElementById("cart");
-  cartIcon.addEventListener("click", showCartWindow);
-
   const checkoutButton = document.getElementById("checkoutButton");
   if (checkoutButton && selectedQuantity > 0) {
     checkoutButton.addEventListener("click", function () {
@@ -115,3 +110,8 @@ ${
   }
 }
 
+// Event Listener für den Warenkorb
+document.addEventListener("DOMContentLoaded", function () {
+  const cartIcon = document.getElementById("cart");
+  cartIcon.addEventListener("click", showCartWindow);
+});
