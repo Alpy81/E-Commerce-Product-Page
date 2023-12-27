@@ -22,7 +22,6 @@
 }
 
 :root {
-
   /* Primary Colors */
   --orange: hsl(26, 100%, 55%);
   --pale-orange: hsl(25, 100%, 94%);
@@ -105,7 +104,7 @@ section {
   gap: 7rem;
 }
 
-.product-main {
+#product-main {
   width: 25vw;
   height: 42vh;
   border: 0px solid;

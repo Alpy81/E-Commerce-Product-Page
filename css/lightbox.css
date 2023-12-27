@@ -1,74 +1,97 @@
 #lightbox {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-  }
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
 
-  .main-pic {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5rem;
-  }
-  
-  .main-pic img {
-    width: 45vw;
-    height: 70vh;
-    border: 0px solid;
-    border-radius: 25px;
-    margin-bottom: 3rem;
-  }
+.main-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
 
-  #prev-icon, #next-icon {
-    position: absolute;
-    top: 43%;
-    transform: translateY(-50%);
-    display: flex;
-    border: 7px solid;
-    border-radius: 100%;
-    border-color: white;
-    background-color: white;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-  }
-   
-   #prev-icon {
-    left: 23rem;
-  }
-   
-   #next-icon {
-    right: 23rem;
-  }
+.main-pic img {
+  width: 42vw;
+  height: 70vh;
+  border: 0px solid;
+  border-radius: 25px;
+  margin-bottom: 3rem;
+}
 
-  #prev-icon:hover, 
+#prev-icon,
+#next-icon {
+  position: absolute;
+  top: 43%;
+  transform: translateY(-50%);
+  display: flex;
+  border: 7px solid;
+  border-radius: 100%;
+  border-color: white;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+#icon-close {
+  width: 2%;
+  height: 3%;
+  margin-left: 62rem;
+  color: black;
+}
+
+#icon-close:hover {
+  background-color: var(--orange);
+  border: 0px solid;
+  border-radius: 50%;
+}
+
+#prev-icon {
+  left: 25rem;
+}
+
+#next-icon {
+  right: 25rem;
+}
+
+#prev-icon:hover,
+#next-icon:hover {
+  background-color: var(--orange);
+  border-color: var(--orange);
+}
+
+#lightbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#lightbox-container img {
+  width: 8vw;
+  height: 13vh;
+  border: 0px solid;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#lightbox-container img:hover {
+  background-color: var(--pale-orange);
+  filter: sepia(80%) brightness(90%);
+}
+
+/** MEDIA QUERIES **/
+
+@media screen and (min-width: 1440px) {
+  #prev-icon:hover,
   #next-icon:hover {
-    background-color: var(--orange);
+    background-color: initial;
     border-color: var(--orange);
   }
-   
-  #lightbox-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  #lightbox-container img {
-    width: 8vw;
-    height: 13vh;
-    border: 0px solid;
-    border-radius: 25px;
-    cursor: pointer;
-  }
-
-  #lightbox-container img:hover {
-    background-color: var(--pale-orange);
-    filter: sepia(80%) brightness(90%);
-  }
-  
+}
