@@ -353,9 +353,11 @@ span {
 }
 
 #move-page {
-  margin-left: 7rem;
+  margin-left: 8rem;
   text-decoration: none;
   font-family: KumbhSans-Regular, sans-serif;
+  font-size: 12px;
+  color: black;
   cursor: pointer;
 }
 
