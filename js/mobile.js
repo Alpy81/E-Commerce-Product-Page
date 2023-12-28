@@ -100,7 +100,7 @@ ${
             <span style="color: black; font-family: KumbhSans-Bold;">$${totalPrice.toFixed()}</span>
           </p>
         </div>
-        <img src="./img/image-delete.png" style="cursor: pointer; margin-top: 1rem; margin-left: auto;" onclick="deleteCartItem()">
+        <img src="../img/image-delete.png" style="cursor: pointer; margin-top: 1rem; margin-left: auto;" onclick="deleteCartItem()">
       </div>
       <button id="checkoutButton" style="padding: 10px; background-color: hsl(26, 100%, 55%); margin-bottom: 5px; color: #fff; border: none; border-radius: 10px; cursor: pointer;">Checkout</button>
     `
@@ -108,7 +108,7 @@ ${
       <hr style="margin-bottom: 10px; border-radius: 10px;">
       <h4 style="display: flex; justify-content: center; align-items: center; margin-top: 3rem; 
       color: hsl(219, 9%, 45%); font-family: KumbhSans-Bold;">Your Cart is Empty</h4>
-      <img src="./img/image-delete.png" style="cursor: pointer; margin-top: 4rem; margin-left: 15rem;" onclick="deleteCartItem()">
+      <img src="../img/image-delete.png" style="cursor: pointer; margin-top: 4rem; margin-left: 15rem;" onclick="deleteCartItem()">
     `
 }
 `;
@@ -127,10 +127,10 @@ ${
 const cartIcon = document.getElementById("cart");
 cartIcon.addEventListener("click", showCartWindow);
 
-// Event Listener für das Schließen des Warenkorbs bei Klick außerhalb
+// Event Listener zum Schließen des Warenkorbfensters bei Klick außerhalb
 document.addEventListener("click", function (event) {
-  const sidebarContainer = document.getElementById("sidebarContainer");
-  if (sidebarContainer && !sidebarContainer.contains(event.target)) {
-    hideSidebar();
+  if (!cartWindow.contains(event.target) && event.target !== cartIcon) {
+    // Klick war außerhalb des Warenkorbfensters und nicht auf das Warenkorb-Symbol
+    deleteCartItem();
   }
 });
