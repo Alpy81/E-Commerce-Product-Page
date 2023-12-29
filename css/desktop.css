@@ -225,6 +225,14 @@ button {
   cursor: pointer;
 }
 
+#move-page {
+  margin-left: 18rem;
+  text-decoration: none;
+  font-family: KumbhSans-Regular, sans-serif;
+  cursor: pointer;
+  color: blue;
+}
+
 span {
   margin-top: 5px;
 }
@@ -253,14 +261,6 @@ span {
   border-color: var(--orange);
   background-color: var(--pale-orange);
   filter: sepia(80%) brightness(90%);
-}
-
-#move-page {
-  margin-left: 18rem;
-  text-decoration: none;
-  font-family: KumbhSans-Regular, sans-serif;
-  cursor: pointer;
-  color: black;
 }
 
 /** MEDIA QUERIES **/

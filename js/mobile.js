@@ -100,7 +100,7 @@ ${
             <span style="color: black; font-family: KumbhSans-Bold;">$${totalPrice.toFixed()}</span>
           </p>
         </div>
-        <img src="../img/image-delete.png" style="cursor: pointer; margin-top: 1rem; margin-left: auto;" onclick="deleteCartItem()">
+        <img src="./img/image-delete.png" style="cursor: pointer; margin-top: 1rem; margin-left: auto;" onclick="deleteCartItem()">
       </div>
       <button id="checkoutButton" style="padding: 10px; background-color: hsl(26, 100%, 55%); margin-bottom: 5px; color: #fff; border: none; border-radius: 10px; cursor: pointer;">Checkout</button>
     `

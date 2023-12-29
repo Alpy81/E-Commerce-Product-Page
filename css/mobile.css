@@ -283,12 +283,12 @@ p {
 
 .area-right {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
-  margin-right: 1rem;
   margin-top: -1.5rem;
+  margin-right: 1.8rem;
   color: var(--grayish-blue);
-  font-family: KumbhSans-Light, sans-serif;
+  font-family: KumbhSans-Regular, sans-serif;
 }
 
 #price {
@@ -304,11 +304,6 @@ p {
   padding: 1px 7px;
   border-color: var(--pale-orange);
   background-color: var(--pale-orange);
-}
-
-del {
-  font-family: KumbhSans-Regular, sans-serif;
-  transform: translateX(-3.5rem);
 }
 
 .quantity-box {
