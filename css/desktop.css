@@ -299,6 +299,11 @@ span {
     margin-left: 7.8rem;
   }
 
+  #product-main {
+    width: 35vw;
+    height: 50vh;
+  }
+
   article p {
     width: 58%;
     line-height: 2rem;
@@ -325,8 +330,9 @@ span {
     padding: 8px 40px;
   }
 
-  #product-main {
-    width: 35vw;
-    height: 50vh;
+  #move-page {
+    margin-left: 22rem;
+    font-size: 16px;
+    font-weight: bold;
   }
 }

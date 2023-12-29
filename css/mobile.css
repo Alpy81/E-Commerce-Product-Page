@@ -308,7 +308,7 @@ p {
 
 del {
   font-family: KumbhSans-Regular, sans-serif;
-  margin-right: 0.5rem;
+  transform: translateX(-3.5rem);
 }
 
 .quantity-box {
@@ -336,6 +336,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 1rem;
   margin-bottom: 1rem;
   padding: 15px;
   gap: 0.5rem;
@@ -353,43 +354,20 @@ span {
 }
 
 #move-page {
-  margin-left: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#move-page a {
   text-decoration: none;
   font-family: KumbhSans-Regular, sans-serif;
-  font-size: 12px;
-  color: black;
+  font-size: 13px;
+  color: blue;
   cursor: pointer;
 }
 
 /** MEDIA QUERIES **/
-
-@media only screen and (max-width: 1440px) {
-  .navbar {
-    height: 8vh;
-    padding: 1rem;
-  }
-
-  #logo {
-    margin-top: 0;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .quantity-box {
-    gap: 1rem;
-  }
-
-  button {
-    margin-left: 1rem;
-    padding: 15px;
-  }
-
-  .btn-cart {
-    margin-bottom: -3px;
-  }
-}
 
 @media only screen and (min-width: 1440px) {
   body {
@@ -398,6 +376,10 @@ span {
 
   nav {
     height: 12vh;
+  }
+
+  section {
+    height: 50vh;
   }
 
   article {
@@ -443,9 +425,8 @@ span {
     }
 
     del {
-      margin-right: 7rem;
+      margin-right: 3.7rem;
     }
-
     button {
       margin-left: 2rem;
       padding: 20px;
@@ -457,8 +438,29 @@ span {
   }
 
   #move-page {
-    margin-left: 38rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 4.5rem;
+    font-size: 13px;
+  }
+
+  #move-page a {
+    margin-right: 8rem;
     font-size: 16px;
-    font-weight: bold;
+    color: blue;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .next-icon {
+    left: 50%;
+  }
+
+  .area-right {
+    margin-right: 4rem;
+  }
+
+  #move-page {
+    margin-right: 3rem;
   }
 }
