@@ -363,45 +363,6 @@ span {
 
 /** MEDIA QUERIES **/
 
-@media only screen and (max-width: 375px) {
-  nav {
-    height: 8vh;
-  }
-
-  .navbar {
-    padding: 1rem;
-  }
-
-  .left-icons {
-    gap: 0.5rem;
-  }
-
-  .image-container {
-    margin: 1rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .pricing-area {
-    margin-bottom: 1rem;
-
-    .quantity-box {
-      gap: 1rem;
-    }
-
-    button {
-      margin-left: 1rem;
-      padding: 15px;
-    }
-
-    .btn-cart {
-      margin-bottom: -4px;
-    }
-  }
-}
-
 @media only screen and (max-width: 1440px) {
   .navbar {
     height: 8vh;
@@ -443,6 +404,10 @@ span {
     margin-left: 1rem;
   }
 
+  article p {
+    width: 38%;
+  }
+
   .navbar {
     padding: 2rem;
   }
@@ -452,13 +417,13 @@ span {
   }
 
   .next-icon {
-    top: 55%;
     left: 65%;
+    top: 55%;
   }
 
   #avatar {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
 
   .image-container {
@@ -489,5 +454,11 @@ span {
     .btn-cart {
       margin-bottom: -8px;
     }
+  }
+
+  #move-page {
+    margin-left: 38rem;
+    font-size: 16px;
+    font-weight: bold;
   }
 }
