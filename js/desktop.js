@@ -98,14 +98,14 @@ ${
             <span style="color: black; font-family: KumbhSans-Bold;">$${totalPrice.toFixed()}</span>
           </p>
         </div>
-        <img src="./img/image-delete.png" style="cursor: pointer; margin-top: 2.3rem; margin-right: 3rem;" onclick="deleteCartItem()">
+        <img src="../img/image-delete.png" style="cursor: pointer; margin-top: 2.3rem; margin-right: 3rem;" onclick="deleteCartItem()">
       </div>
       <button id="checkoutButton" style="padding: 10px 50px; margin-left: 3rem; margin-top: 2rem; background-color: hsl(26, 100%, 55%); color: #fff; border: none; border-radius: 10px; cursor: pointer;">Checkout</button>
     `
     : `
       <hr style="margin-bottom: 10px; margin-left: -20px; width: 115%;">
       <h4 style="display: flex; justify-content: center; align-items: center; margin-top: 3rem; color: hsl(219, 9%, 45%); font-family: KumbhSans-Bold;">Your Cart is Empty</h4>
-      <img src="./img/image-delete.png" style="cursor: pointer; margin-top: 4rem; margin-left: 15rem;" onclick="deleteCartItem()">
+      <img src="../img/image-delete.png" style="cursor: pointer; margin-top: 4rem; margin-left: 15rem;" onclick="deleteCartItem()">
     `
 }`;
 
