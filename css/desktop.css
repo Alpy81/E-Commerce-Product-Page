@@ -192,7 +192,6 @@ article p {
   display: flex;
   justify-content: space-center;
   align-items: center;
-  margin-right: 1rem;
   border: 0px solid;
   border-radius: 7px;
   background: hsl(223, 64%, 98%);
@@ -266,7 +265,7 @@ span {
 
 /** MEDIA QUERIES **/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 375px) {
   .gallery {
     flex-direction: column;
     margin-left: 6rem;
@@ -282,17 +281,52 @@ span {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1920px) {
   body {
-    font-size: 16px;
+    font-size: 22px;
   }
   nav {
-    gap: 5rem;
+    gap: 15rem;
   }
-  .gallery {
-    margin-left: 12rem;
+
+  #avatar {
+    width: 40px;
+    height: 40px;
   }
+
+  hr {
+    width: 87%;
+    margin-left: 7.8rem;
+  }
+
+  article p {
+    width: 58%;
+    line-height: 2rem;
+  }
+
+  .price-description {
+    margin-right: 15rem;
+    margin-top: -6rem;
+  }
+
+  .retail-price {
+    margin-right: 18.5rem;
+  }
+
   .order-field {
-    margin-left: 18rem;
+    margin-right: 16rem;
+  }
+
+  .quantity-box {
+    padding: 15px;
+  }
+
+  button {
+    padding: 8px 40px;
+  }
+
+  #product-main {
+    width: 35vw;
+    height: 50vh;
   }
 }

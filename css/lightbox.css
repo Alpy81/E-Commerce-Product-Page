@@ -6,22 +6,22 @@
   left: 0%;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(15, 4, 4, 0.7);
 }
 
 .main-pic {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
 }
 
 .main-pic img {
   width: 42vw;
   height: 70vh;
   border: 0px solid;
+  margin-top: 4rem;
   border-radius: 25px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 #prev-icon,
@@ -40,9 +40,9 @@
 }
 
 #icon-close {
-  width: 2%;
-  height: 3%;
+  position: absolute;
   margin-left: 62rem;
+  margin-top: 1.5rem;
   color: black;
 }
 
@@ -88,10 +88,39 @@
 
 /** MEDIA QUERIES **/
 
-@media screen and (min-width: 1440px) {
-  #prev-icon:hover,
-  #next-icon:hover {
-    background-color: initial;
-    border-color: var(--orange);
+@media screen and (min-width: 1920px) {
+  #icon-close {
+    position: absolute;
+    margin-top: 6rem;
+    left: 10.6%;
+  }
+
+  .main-pic {
+    margin-top: 5rem;
+  }
+
+  #product-one,
+  #product-two,
+  #product-three,
+  #product-four {
+    width: 28vw;
+    height: 60vh;
+  }
+
+  #lightbox-container {
+    gap: 1rem;
+  }
+
+  #lightbox-container img {
+    width: 6vw;
+    height: 14vh;
+  }
+
+  #prev-icon {
+    margin-left: 17rem;
+  }
+
+  #next-icon {
+    margin-right: 17rem;
   }
 }
