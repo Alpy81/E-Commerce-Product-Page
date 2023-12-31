@@ -83,7 +83,7 @@ function showCartWindow() {
   // Inhalt des Warenkorbs
   cartWindow.innerHTML = `
 <h4 style="margin-bottom: 10px; font-family: KumbhSans-Bold; border-radius: 10px; color: hsl(219, 9%, 45%);">
-  ${selectedQuantity > 0 ? "Cart" : "Empty"}
+  ${selectedQuantity > 0 ? "Cart" : "Cart"}
 </h4>
 ${
   selectedQuantity > 0
