@@ -203,8 +203,8 @@ nav {
 }
 
 #avatar {
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
 }
 
 /** HEADER AREA **/
@@ -249,6 +249,7 @@ nav {
 
 h1 {
   font-family: KumbhSans-Bold, sans-serif;
+  font-size: 20px;
   margin-top: 1rem;
   margin-left: 1rem;
   width: 60%;
@@ -264,6 +265,7 @@ h6 {
 
 p {
   font-family: KumbhSans-Light, sans-serif;
+  color: var(--dark-grayish-blue);
   margin-top: 1rem;
   margin-left: 1rem;
 }
@@ -289,11 +291,13 @@ p {
   margin-right: 1.8rem;
   color: var(--grayish-blue);
   font-family: KumbhSans-Regular, sans-serif;
+  font-size: 13px;
 }
 
 #price {
   font-family: KumbhSans-Bold, sans-serif;
   font-size: 22px;
+  color: black;
 }
 
 #discount {

@@ -17,7 +17,7 @@ function addToCart() {
   if (currentQuantity > 0) {
     cartQuantityElement.innerText = currentQuantity;
     cartQuantityElement.style.position = "absolute";
-    cartQuantityElement.style.right = "175px";
+    cartQuantityElement.style.right = "171px";
     cartQuantityElement.style.top = "35px";
     cartQuantityElement.style.border = "0px solid";
     cartQuantityElement.style.borderRadius = "20px";
