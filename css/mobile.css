@@ -419,9 +419,12 @@ span {
       gap: 2rem;
     }
 
-    del {
-      margin-right: 6.4rem;
+    .area-right {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 14rem;
     }
+
     button {
       margin-left: 2rem;
       padding: 20px;
@@ -452,7 +455,9 @@ span {
   }
 
   .area-right {
-    margin-right: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 14rem;
   }
 
   #move-page {
