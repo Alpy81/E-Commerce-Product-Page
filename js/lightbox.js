@@ -1,8 +1,8 @@
-// Define a global variable to keep track of the current image index
+// Globale Variable, um den aktuellen Bildindex zu verfolgen
 let currentIndex = 0;
 
 function openLightBox(className) {
-  // Update currentIndex based on className
+  // Aktualisierung des currentIndex basierend auf className
   const classes = [
     "product-one",
     "product-two",
@@ -11,40 +11,40 @@ function openLightBox(className) {
   ];
   currentIndex = classes.indexOf(className);
 
-  // Get the main-pic element
+  // Hauptbild-Element
   const mainPicElement = document.querySelector(".main-pic");
 
-  // Hide all images in the .main-pic div
+  // Verstecken aller Bilder im .main-pic div
   Array.from(mainPicElement.children).forEach(
     (img) => (img.style.display = "none")
   );
 
-  // Show the corresponding image in the .main-pic div
+  // Bild im .main-pic
   mainPicElement.querySelector("." + className).style.display = "block";
 
-  // Show the lightbox
+  // Anzeigen der Lightbox
   document.getElementById("lightbox").style.display = "flex";
 }
 
 function closeLightBox() {
-  // Hide the lightbox
+  // Lightbox verstecken
   document.getElementById("lightbox").style.display = "none";
 }
 
 function changeImage(offset) {
-  // Calculate the new index
+  // Berechnung des neuen Index
   const newIndex = (currentIndex + offset + 4) % 4;
 
-  // Hide all images in the .main-pic div
+  // Bilder im .main-pic verstecken
   const mainPicElement = document.querySelector(".main-pic");
   Array.from(mainPicElement.children).forEach(
     (img) => (img.style.display = "none")
   );
 
-  // Show the corresponding image in the .main-pic div
+  // Anzeigen des entsprechenden Hauptbilds im .main-pic div
   mainPicElement.children[newIndex].style.display = "block";
 
-  // Update currentIndex
+  // Aktualisierung des currentIndex
   currentIndex = newIndex;
 }
 
