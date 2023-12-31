@@ -127,29 +127,3 @@ ${
     });
   }
 });
-
-// Lightbox-Funktionen für Bildwechsel
-let lightboxIndex = 0;
-const imageIds = [
-  "product-one",
-  "product-two",
-  "product-three",
-  "product-four",
-];
-
-function showNextImage() {
-  lightboxIndex = (lightboxIndex + 1) % imageIds.length;
-  updateMainPic();
-}
-
-function showPrevImage() {
-  lightboxIndex = (lightboxIndex - 1 + imageIds.length) % imageIds.length;
-  updateMainPic();
-}
-
-function updateMainPic() {
-  imageIds.forEach((id) => {
-    document.getElementById(id).style.display = "none";
-  });
-  document.getElementById(imageIds[lightboxIndex]).style.display = "block";
-}
