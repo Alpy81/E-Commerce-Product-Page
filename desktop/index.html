@@ -128,8 +128,12 @@
       <section class="lightbox-area">
         <div id="lightbox" onclick="closeLightBox()">
           <img id="icon-close" src="../img/icon-close.png" alt="close" />
-          <img id="prev-icon" src="../img/icon-previous.png" alt="previous"
-          onclick="showPrevImage()"">
+          <img
+            id="prev-icon"
+            src="../img/icon-previous.png"
+            alt="previous"
+            onclick="changeImage(-1)"
+          />
           <div class="main-pic">
             <img
               id="product-one"
@@ -160,7 +164,7 @@
             id="next-icon"
             src="../img/icon-next.png"
             alt="next"
-            onclick="showPrevImage()"
+            onclick="changeImage(1)"
           />
           <div id="lightbox-container">
             <img
