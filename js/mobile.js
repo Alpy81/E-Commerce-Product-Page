@@ -82,33 +82,44 @@ function showCartWindow() {
 
   // Inhalt des Warenkorbs
   cartWindow.innerHTML = `
-<h4 style="margin-bottom: 10px; font-family: KumbhSans-Bold; border-radius: 10px; color: hsl(219, 9%, 45%);">
+<h4 style="margin-bottom: 10px; font-family: KumbhSans-Bold; 
+border-radius: 10px; color: hsl(219, 9%, 45%);">
   ${selectedQuantity > 0 ? "Cart" : "Cart"}
 </h4>
 ${
   selectedQuantity > 0
     ? `
       <hr style="margin-bottom: 10px; border-radius: 10px;">
-      <div style="display: flex; align-items: center; margin-bottom: 15px; border-radius: 10px;">
+      <div style="display: flex; align-items: center; 
+      margin-bottom: 15px; border-radius: 10px;">
         <img src="${
           productImage.src
         }" alt="${productName}" style="width: 50px; height: 50px; margin-right: 10px; border-radius: 5px;">
         <div>
-          <p style="margin: 0; color: hsl(219, 9%, 45%); font-family: KumbhSans-Regular; font-size: 14px;">${productName}</p>
-          <p style="margin: 0; color: hsl(219, 9%, 45%); font-family: KumbhSans-Regular; font-size: 14px;">
+          <p style="margin: 0; color: hsl(219, 9%, 45%); 
+          font-family: KumbhSans-Regular; font-size: 14px;">${productName}</p>
+          <p style="margin: 0; color: hsl(219, 9%, 45%); 
+          font-family: KumbhSans-Regular; font-size: 14px;">
             $${basePrice.toFixed(2)} x ${selectedQuantity} =
-            <span style="color: black; font-family: KumbhSans-Bold;">$${totalPrice.toFixed()}</span>
+            <span style="color: black; font-family: 
+            KumbhSans-Bold;">$${totalPrice.toFixed()}</span>
           </p>
         </div>
-        <img src="./img/image-delete.png" style="cursor: pointer; margin-top: 1rem; margin-left: auto;" onclick="deleteCartItem()">
+        <img src="./img/image-delete.png" style="cursor: pointer; 
+        margin-top: 1rem; margin-left: auto;" onclick="deleteCartItem()">
       </div>
-      <button id="checkoutButton" style="padding: 10px; background-color: hsl(26, 100%, 55%); margin-bottom: 5px; color: #fff; border: none; border-radius: 10px; cursor: pointer;">Checkout</button>
+      <button id="checkoutButton" style="padding: 10px; 
+      background-color: hsl(26, 100%, 55%); margin-bottom: 5px; color: #fff; 
+      border: none; border-radius: 10px; cursor: pointer;">Checkout</button>
     `
     : `
       <hr style="margin-bottom: 10px; border-radius: 10px;">
-      <h4 style="display: flex; justify-content: center; align-items: center; margin-top: 3rem; 
-      color: hsl(219, 9%, 45%); font-family: KumbhSans-Bold;">Your Cart is Empty</h4>
-      <img src="../img/image-delete.png" style="cursor: pointer; margin-top: 4rem; margin-left: 15rem;" onclick="deleteCartItem()">
+      <h4 style="display: flex; justify-content: center; 
+      align-items: center; margin-top: 3rem; 
+      color: hsl(219, 9%, 45%); font-family: 
+      KumbhSans-Bold;">Your Cart is Empty</h4>
+      <img src="../img/image-delete.png" style="cursor: pointer; 
+      margin-top: 4rem; margin-left: 15rem;" onclick="deleteCartItem()">
     `
 }
 `;
