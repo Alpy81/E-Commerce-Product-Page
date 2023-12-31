@@ -17,7 +17,7 @@ function addToCart() {
   if (currentQuantity > 0) {
     cartQuantityElement.innerText = currentQuantity;
     cartQuantityElement.style.position = "absolute";
-    cartQuantityElement.style.right = "175px";
+    cartQuantityElement.style.right = "180px";
     cartQuantityElement.style.top = "35px";
     cartQuantityElement.style.border = "0px solid";
     cartQuantityElement.style.borderRadius = "20px";
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Inhalt des Warenkorbs
     cartWindow.innerHTML = `
 <h4 style="margin-bottom: 10px; font-family: KumbhSans-Bold; border-radius: 10px; color: hsl(219, 9%, 45%);">
-  ${selectedQuantity > 0 ? "Cart" : "Empty"}
+  ${selectedQuantity > 0 ? "Cart" : "Cart"}
 </h4>
 ${
   selectedQuantity > 0
@@ -104,7 +104,7 @@ ${
     `
     : `
       <hr style="margin-bottom: 10px; margin-left: -20px; width: 115%;">
-      <h4 style="display: flex; justify-content: center; align-items: center; margin-top: 3rem; color: hsl(219, 9%, 45%); font-family: KumbhSans-Bold;">Your Cart is Empty</h4>
+      <h4 style="display: flex; justify-content: center; align-items: center; margin-top: 3rem; color: hsl(219, 9%, 45%); font-family: KumbhSans-Bold; font-size: 15px;">Your Cart is Empty</h4>
       <img src="../img/image-delete.png" style="cursor: pointer; margin-top: 4rem; margin-left: 15rem;" onclick="deleteCartItem()">
     `
 }`;
@@ -127,3 +127,29 @@ ${
     });
   }
 });
+
+// Lightbox-Funktionen für Bildwechsel
+let lightboxIndex = 0;
+const imageIds = [
+  "product-one",
+  "product-two",
+  "product-three",
+  "product-four",
+];
+
+function showNextImage() {
+  lightboxIndex = (lightboxIndex + 1) % imageIds.length;
+  updateMainPic();
+}
+
+function showPrevImage() {
+  lightboxIndex = (lightboxIndex - 1 + imageIds.length) % imageIds.length;
+  updateMainPic();
+}
+
+function updateMainPic() {
+  imageIds.forEach((id) => {
+    document.getElementById(id).style.display = "none";
+  });
+  document.getElementById(imageIds[lightboxIndex]).style.display = "block";
+}

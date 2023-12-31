@@ -91,12 +91,12 @@
 @media screen and (min-width: 1920px) {
   #icon-close {
     position: absolute;
-    margin-top: 6rem;
+    margin-top: 4rem;
     left: 10.6%;
   }
 
   .main-pic {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 
   #product-one,
